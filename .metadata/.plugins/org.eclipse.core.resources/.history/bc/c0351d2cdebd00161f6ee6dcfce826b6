@@ -1,0 +1,11 @@
+package com.mx;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Prueba p=new PruebaProxy();
+		p.getValor();
+
+	}
+
+}

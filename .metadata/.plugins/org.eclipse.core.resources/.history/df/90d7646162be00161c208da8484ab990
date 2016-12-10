@@ -1,0 +1,20 @@
+package com.mx;
+
+import java.rmi.RemoteException;
+
+import com.mx.everis.taller.controller.*;
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     PersonController p=new PersonControllerProxy();
+     
+     try {
+		p.pruebaServidor();
+	} catch (RemoteException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	}
+
+}

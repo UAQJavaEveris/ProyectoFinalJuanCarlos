@@ -1,0 +1,13 @@
+package com.mx;
+
+import java.rmi.RemoteException;
+
+public class Test {
+
+	public static void main(String[] args) throws  {
+		Prueba p=new PruebaProxy();
+		p.getValor();
+
+	}
+
+}

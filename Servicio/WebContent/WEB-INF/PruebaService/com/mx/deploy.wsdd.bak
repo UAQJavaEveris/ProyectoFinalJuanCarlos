@@ -1,0 +1,32 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from PruebaService WSDL service -->
+
+  <service name="Prueba" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://mx.com"/>
+      <parameter name="wsdlServiceElement" value="PruebaService"/>
+      <parameter name="schemaQualified" value="http://mx.com"/>
+      <parameter name="wsdlServicePort" value="Prueba"/>
+      <parameter name="className" value="com.mx.PruebaSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="Prueba"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getValores" qname="operNS:getValores" xmlns:operNS="http://mx.com" returnQName="retNS:getValoresReturn" xmlns:retNS="http://mx.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://mx.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://mx.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getValor" qname="operNS:getValor" xmlns:operNS="http://mx.com" returnQName="retNS:getValorReturn" xmlns:retNS="http://mx.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="getValores getValor"/>
+
+  </service>
+</deployment>

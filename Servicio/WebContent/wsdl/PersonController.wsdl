@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://controller.taller.everis.mx.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://controller.taller.everis.mx.com" xmlns:intf="http://controller.taller.everis.mx.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://controller.taller.everis.mx.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="actPerson">
+    <complexType>
+     <sequence>
+      <element name="nombre" type="xsd:string"/>
+      <element name="apellidos" type="xsd:string"/>
+      <element name="logros" type="xsd:string"/>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="actPersonResponse">
+    <complexType/>
+   </element>
+   <element name="addPersons">
+    <complexType>
+     <sequence>
+      <element name="nombre" type="xsd:string"/>
+      <element name="apellidos" type="xsd:string"/>
+      <element name="logros" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addPersonsResponse">
+    <complexType/>
+   </element>
+   <element name="removePerson">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removePersonResponse">
+    <complexType/>
+   </element>
+   <element name="pruebaServidor">
+    <complexType/>
+   </element>
+   <element name="pruebaServidorResponse">
+    <complexType>
+     <sequence>
+      <element name="pruebaServidorReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addPersonsRequest">
+
+      <wsdl:part element="impl:addPersons" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="pruebaServidorRequest">
+
+      <wsdl:part element="impl:pruebaServidor" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addPersonsResponse">
+
+      <wsdl:part element="impl:addPersonsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="actPersonResponse">
+
+      <wsdl:part element="impl:actPersonResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removePersonRequest">
+
+      <wsdl:part element="impl:removePerson" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removePersonResponse">
+
+      <wsdl:part element="impl:removePersonResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="pruebaServidorResponse">
+
+      <wsdl:part element="impl:pruebaServidorResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="actPersonRequest">
+
+      <wsdl:part element="impl:actPerson" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="PersonController">
+
+      <wsdl:operation name="actPerson">
+
+         <wsdl:input message="impl:actPersonRequest" name="actPersonRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:actPersonResponse" name="actPersonResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addPersons">
+
+         <wsdl:input message="impl:addPersonsRequest" name="addPersonsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addPersonsResponse" name="addPersonsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removePerson">
+
+         <wsdl:input message="impl:removePersonRequest" name="removePersonRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:removePersonResponse" name="removePersonResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="pruebaServidor">
+
+         <wsdl:input message="impl:pruebaServidorRequest" name="pruebaServidorRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:pruebaServidorResponse" name="pruebaServidorResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="PersonControllerSoapBinding" type="impl:PersonController">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="actPerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="actPersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="actPersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addPersons">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addPersonsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addPersonsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removePerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removePersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removePersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="pruebaServidor">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="pruebaServidorRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="pruebaServidorResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="PersonControllerService">
+
+      <wsdl:port binding="impl:PersonControllerSoapBinding" name="PersonController">
+
+         <wsdlsoap:address location="http://localhost:8081/Servicio/services/PersonController"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

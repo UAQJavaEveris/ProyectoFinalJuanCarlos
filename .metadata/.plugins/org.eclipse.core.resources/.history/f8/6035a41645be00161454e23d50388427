@@ -1,0 +1,72 @@
+package com.mx.everis.taller.controller;
+
+public class PersonControllerServicePortTypeProxy implements com.mx.everis.taller.controller.PersonControllerServicePortType {
+  private String _endpoint = null;
+  private com.mx.everis.taller.controller.PersonControllerServicePortType personControllerServicePortType = null;
+  
+  public PersonControllerServicePortTypeProxy() {
+    _initPersonControllerServicePortTypeProxy();
+  }
+  
+  public PersonControllerServicePortTypeProxy(String endpoint) {
+    _endpoint = endpoint;
+    _initPersonControllerServicePortTypeProxy();
+  }
+  
+  private void _initPersonControllerServicePortTypeProxy() {
+    try {
+      personControllerServicePortType = (new com.mx.everis.taller.controller.PersonControllerServiceLocator()).getPersonControllerServiceHttpSoap11Endpoint();
+      if (personControllerServicePortType != null) {
+        if (_endpoint != null)
+          ((javax.xml.rpc.Stub)personControllerServicePortType)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
+        else
+          _endpoint = (String)((javax.xml.rpc.Stub)personControllerServicePortType)._getProperty("javax.xml.rpc.service.endpoint.address");
+      }
+      
+    }
+    catch (javax.xml.rpc.ServiceException serviceException) {}
+  }
+  
+  public String getEndpoint() {
+    return _endpoint;
+  }
+  
+  public void setEndpoint(String endpoint) {
+    _endpoint = endpoint;
+    if (personControllerServicePortType != null)
+      ((javax.xml.rpc.Stub)personControllerServicePortType)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
+    
+  }
+  
+  public com.mx.everis.taller.controller.PersonControllerServicePortType getPersonControllerServicePortType() {
+    if (personControllerServicePortType == null)
+      _initPersonControllerServicePortTypeProxy();
+    return personControllerServicePortType;
+  }
+  
+  public void addPersons(com.mx.everis.taller.model.xsd.Persona p) throws java.rmi.RemoteException{
+    if (personControllerServicePortType == null)
+      _initPersonControllerServicePortTypeProxy();
+    personControllerServicePortType.addPersons(p);
+  }
+  
+  public java.lang.String pruebaServidor() throws java.rmi.RemoteException{
+    if (personControllerServicePortType == null)
+      _initPersonControllerServicePortTypeProxy();
+    return personControllerServicePortType.pruebaServidor();
+  }
+  
+  public void removePerson(java.lang.Integer id) throws java.rmi.RemoteException{
+    if (personControllerServicePortType == null)
+      _initPersonControllerServicePortTypeProxy();
+    personControllerServicePortType.removePerson(id);
+  }
+  
+  public void actPerson(com.mx.everis.taller.model.xsd.Persona p) throws java.rmi.RemoteException{
+    if (personControllerServicePortType == null)
+      _initPersonControllerServicePortTypeProxy();
+    personControllerServicePortType.actPerson(p);
+  }
+  
+  
+}

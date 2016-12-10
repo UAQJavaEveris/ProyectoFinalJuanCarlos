@@ -1,0 +1,12 @@
+package com.mx;
+
+import javax.jws.WebService;
+
+@WebService
+public class Prueba {
+  
+	public String getValor()
+	{
+		return "hola";
+	}
+}

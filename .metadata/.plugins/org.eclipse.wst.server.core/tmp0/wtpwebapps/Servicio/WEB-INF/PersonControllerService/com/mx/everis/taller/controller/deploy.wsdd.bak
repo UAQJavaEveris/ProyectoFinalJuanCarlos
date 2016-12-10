@@ -1,0 +1,42 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from PersonControllerService WSDL service -->
+
+  <service name="PersonController" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://controller.taller.everis.mx.com"/>
+      <parameter name="wsdlServiceElement" value="PersonControllerService"/>
+      <parameter name="schemaQualified" value="http://controller.taller.everis.mx.com"/>
+      <parameter name="wsdlServicePort" value="PersonController"/>
+      <parameter name="className" value="com.mx.everis.taller.controller.PersonControllerSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="PersonController"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="actPerson" qname="operNS:actPerson" xmlns:operNS="http://controller.taller.everis.mx.com" soapAction="" >
+        <parameter qname="pns:nombre" xmlns:pns="http://controller.taller.everis.mx.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:apellidos" xmlns:pns="http://controller.taller.everis.mx.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:logros" xmlns:pns="http://controller.taller.everis.mx.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:id" xmlns:pns="http://controller.taller.everis.mx.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="addPersons" qname="operNS:addPersons" xmlns:operNS="http://controller.taller.everis.mx.com" soapAction="" >
+        <parameter qname="pns:nombre" xmlns:pns="http://controller.taller.everis.mx.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:apellidos" xmlns:pns="http://controller.taller.everis.mx.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:logros" xmlns:pns="http://controller.taller.everis.mx.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="removePerson" qname="operNS:removePerson" xmlns:operNS="http://controller.taller.everis.mx.com" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://controller.taller.everis.mx.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="pruebaServidor" qname="operNS:pruebaServidor" xmlns:operNS="http://controller.taller.everis.mx.com" returnQName="retNS:pruebaServidorReturn" xmlns:retNS="http://controller.taller.everis.mx.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="addPersons pruebaServidor removePerson actPerson"/>
+
+  </service>
+</deployment>

@@ -1,0 +1,16 @@
+2016-12-08 23:44:53,532 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @589505ms
+2016-12-08 23:44:54,054 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2016-12-08 23:44:54,238 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@59a5a9c{/wse,null,AVAILABLE}
+2016-12-08 23:44:54,274 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@25298a4c{HTTP/1.1,[http/1.1]}{0.0.0.0:49773}
+2016-12-08 23:44:54,275 [main] INFO  org.eclipse.jetty.server.Server - Started @590266ms
+2016-12-08 23:48:07,335 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@25298a4c{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+2016-12-08 23:48:07,383 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@59a5a9c{/wse,null,UNAVAILABLE}
+2016-12-09 13:08:04,270 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @2875766ms
+2016-12-09 13:08:05,013 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2016-12-09 13:08:05,149 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2e106925{/wse,null,AVAILABLE}
+2016-12-09 13:08:05,212 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@52b2454a{HTTP/1.1,[http/1.1]}{0.0.0.0:52947}
+2016-12-09 13:08:05,212 [main] INFO  org.eclipse.jetty.server.Server - Started @2876748ms
+2016-12-09 14:21:23,800 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@52b2454a{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+2016-12-09 14:21:25,324 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2e106925{/wse,null,UNAVAILABLE}
+2016-12-09 21:25:43,149 [Worker-85] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-servlet-api/7.0.47/tomcat-servlet-api-7.0.47-sources.jar
+2016-12-09 21:25:44,234 [Worker-85] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-servlet-api/7.0.47/tomcat-servlet-api-7.0.47-sources.jar

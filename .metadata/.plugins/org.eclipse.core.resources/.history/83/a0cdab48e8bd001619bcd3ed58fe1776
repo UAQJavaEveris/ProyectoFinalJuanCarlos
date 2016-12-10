@@ -1,0 +1,5 @@
+package com.mx.everis.taller.util;
+
+public class DbUtil {
+
+}

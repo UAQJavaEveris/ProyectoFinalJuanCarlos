@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="0/org.eclipse.jst.ws.wsImpl.java">
+		<item value="com.Hola"/>
+		<item value="com.mx.everis.taller.controller.PersonController"/>
+		<item value="com.mx.Probando"/>
+		<item value="com.mx.Prueba"/>
+		<item value="com.mx.Pruebas"/>
+	</list>
+</section>

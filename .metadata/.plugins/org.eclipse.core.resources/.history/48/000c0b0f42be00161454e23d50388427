@@ -1,0 +1,12 @@
+package com.mx.everis.taller.util;
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		PersonaController pc=new PersonaController();
+		
+
+	}
+
+}

@@ -1,0 +1,45 @@
+package com.mx.everis.controller;
+
+import java.util.ArrayList;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import com.mx.everis.taller.dao.PersonaDao;
+import com.mx.everis.taller.model.Persona;
+
+
+@WebService
+public class PersonController {
+
+	private PersonaDao pr=new PersonaDao();
+	@WebMethod
+	public void addPersons(Persona p)
+	{
+      pr.addPerson(p);
+	}
+	
+	@WebMethod
+	public void actPerson(Persona p)
+	{
+      pr.updatePerson(p);
+	}
+	
+	@WebMethod
+	public void removePerson(int id)
+	{
+      pr.deletePerson(id);
+	}
+	
+	@WebMethod
+	public ArrayList<Persona> getAllPersons()
+	{
+          ArrayList<Persona> ls=pr.getAllPerson();
+          return ls;
+	}
+	
+	@WebMethod
+	public String pruebaServidor()
+	{
+          return "Hola esta jalando";
+	}
+}

@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/com/mx/everis/taller/controller/PersonControllerService.java=UTF-8
+encoding//src/com/mx/everis/taller/controller/PersonControllerServiceLocator.java=UTF-8
+encoding//src/com/mx/everis/taller/controller/PersonControllerServicePortType.java=UTF-8
+encoding//src/com/mx/everis/taller/controller/PersonControllerServiceSoap11BindingStub.java=UTF-8
+encoding//src/com/mx/everis/taller/model/xsd/Persona.java=UTF-8

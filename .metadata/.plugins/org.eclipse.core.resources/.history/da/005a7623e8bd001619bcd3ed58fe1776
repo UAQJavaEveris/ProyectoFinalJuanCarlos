@@ -1,0 +1,5 @@
+package com.mx.everis.taller.model;
+
+public class Persona {
+
+}

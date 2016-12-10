@@ -1,0 +1,11 @@
+127.0.0.1 - - [08/Dec/2016:23:41:55 -0600] "GET / HTTP/1.1" 404 961
+0:0:0:0:0:0:0:1 - - [08/Dec/2016:23:41:57 -0600] "GET /WebProyecto/ HTTP/1.1" 200 277
+127.0.0.1 - - [08/Dec/2016:23:44:46 -0600] "GET / HTTP/1.1" 404 961
+127.0.0.1 - - [08/Dec/2016:23:44:47 -0600] "POST /WebProyecto/services/AdminService HTTP/1.0" 200 291
+127.0.0.1 - - [08/Dec/2016:23:44:47 -0600] "POST /WebProyecto/services/AdminService HTTP/1.0" 200 4025
+0:0:0:0:0:0:0:1 - - [08/Dec/2016:23:46:25 -0600] "GET / HTTP/1.1" 404 961
+0:0:0:0:0:0:0:1 - - [08/Dec/2016:23:46:37 -0600] "GET /WebProyecto HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [08/Dec/2016:23:46:37 -0600] "GET /WebProyecto/ HTTP/1.1" 200 277
+0:0:0:0:0:0:0:1 - - [08/Dec/2016:23:46:46 -0600] "GET /WebProyecto/Pruebas?wsdl HTTP/1.1" 404 999
+0:0:0:0:0:0:0:1 - - [08/Dec/2016:23:47:04 -0600] "GET /WebProyecto/Pruebas?wsdl HTTP/1.1" 404 999
+0:0:0:0:0:0:0:1 - - [08/Dec/2016:23:47:39 -0600] "GET /WebProyecto/Pruebas?wsdl HTTP/1.1" 404 999

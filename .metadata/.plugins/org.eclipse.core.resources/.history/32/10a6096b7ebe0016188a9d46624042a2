@@ -1,0 +1,10 @@
+package com.mx.everis.taller.controller;
+
+public class Test {
+
+	public static void main(String[] args) {
+		PersonController pc=new PersonControllerProxy();
+		pc.addPersons("s", "s", "s");
+	}
+
+}

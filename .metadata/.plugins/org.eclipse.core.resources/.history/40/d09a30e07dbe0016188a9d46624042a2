@@ -1,0 +1,14 @@
+package com.ejemplo.cliente;
+
+import com.mx.everis.taller.*;
+import com.mx.everis.taller.controller.PersonController;
+import com.mx.everis.taller.controller.PersonControllerProxy;
+public class Test {
+
+	public static void main(String[] args) {
+		PersonController sp=new PersonControllerProxy();
+		sp.addPersons("s", "s", "sd");
+
+	}
+
+}

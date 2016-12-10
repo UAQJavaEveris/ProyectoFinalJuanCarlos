@@ -1,0 +1,21 @@
+package com.mx.everis.taller.controller;
+
+import java.rmi.RemoteException;
+
+import org.apache.axis2.AxisFault;
+
+public class Text {
+
+	public static void main(String[] args) throws RemoteException {
+		try {
+			PersonControllerServiceStub st=new PersonControllerServiceStub();
+			
+		    st.removePerson(2);
+		} catch (AxisFault e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+
+	}
+
+}

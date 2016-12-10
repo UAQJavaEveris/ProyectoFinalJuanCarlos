@@ -1,0 +1,15 @@
+/**
+ * PersonControllerServicePortType.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package com.mx.everis.taller.controller;
+
+public interface PersonControllerServicePortType extends java.rmi.Remote {
+    public void addPersons(com.mx.everis.taller.model.xsd.Persona p) throws java.rmi.RemoteException;
+    public java.lang.String pruebaServidor() throws java.rmi.RemoteException;
+    public void removePerson(java.lang.Integer id) throws java.rmi.RemoteException;
+    public void actPerson(com.mx.everis.taller.model.xsd.Persona p) throws java.rmi.RemoteException;
+}
